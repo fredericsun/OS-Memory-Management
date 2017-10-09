@@ -1,0 +1,599 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+rm -f shm_client
+rm -f shm_server
+Trying to build project using make
+make
+gcc shm_server.c -o shm_server -Wall -Werror -lrt -lpthread
+gcc shm_client.c -o shm_client -Wall -Werror -lrt -lpthread
+
+
+test build PASSED
+ (build project using make)
+
+starting linttest
+
+**********************************************************************
+
+Test linttest
+Lint test for C programming style
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/../../lint/cpplint.py --extensions c shm_server.c shm_client.c
+Done processing shm_server.c
+Done processing shm_client.c
+Total errors found: 0
+
+
+test linttest PASSED (10 of 10)
+ (Lint test for C programming style)
+
+starting client_without_server
+
+**********************************************************************
+
+Test client_without_server
+Client should exit gracefully if no server is running
+
+**********************************************************************
+running client with: /tmp/tmpsz_NWy/p/shm_client
+
+
+test client_without_server PASSED (10 of 10)
+ (Client should exit gracefully if no server is running)
+
+starting one_client
+
+**********************************************************************
+
+Test one_client
+Test basic functionality for one client & server
+
+**********************************************************************
+running server with: /tmp/tmpsz_NWy/p/shm_server
+running client with: /tmp/tmpsz_NWy/p/shm_client
+/tmp/tmpsz_NWy/p/serveroutput.txt
+/tmp/tmpsz_NWy/p/clientoutput.txt
+
+
+test one_client PASSED (10 of 10)
+ (Test basic functionality for one client & server)
+
+starting two_clients
+
+**********************************************************************
+
+Test two_clients
+Check that 2 clients can run concurrently
+
+**********************************************************************
+running server with: /tmp/tmpsz_NWy/p/shm_server
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+/tmp/tmpsz_NWy/p/serveroutput.txt
+/tmp/tmpsz_NWy/p/clientoutput_0.txt
+/tmp/tmpsz_NWy/p/clientoutput_1.txt
+
+
+test two_clients 
+ (Check that 2 clients can run concurrently)
+
+starting five_clients
+
+**********************************************************************
+
+Test five_clients
+Check that 5 clients can run concurrently
+
+**********************************************************************
+running server with: /tmp/tmpsz_NWy/p/shm_server
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+/tmp/tmpsz_NWy/p/serveroutput.txt
+/tmp/tmpsz_NWy/p/clientoutput_0.txt
+/tmp/tmpsz_NWy/p/clientoutput_1.txt
+/tmp/tmpsz_NWy/p/clientoutput_2.txt
+/tmp/tmpsz_NWy/p/clientoutput_3.txt
+/tmp/tmpsz_NWy/p/clientoutput_4.txt
+
+
+test five_clients 
+ (Check that 5 clients can run concurrently)
+
+starting many_clients
+
+**********************************************************************
+
+Test many_clients
+Check that up to 63 clients can run concurrently
+
+**********************************************************************
+running server with: /tmp/tmpsz_NWy/p/shm_server
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+/tmp/tmpsz_NWy/p/serveroutput.txt
+/tmp/tmpsz_NWy/p/clientoutput_0.txt
+/tmp/tmpsz_NWy/p/clientoutput_1.txt
+/tmp/tmpsz_NWy/p/clientoutput_2.txt
+/tmp/tmpsz_NWy/p/clientoutput_3.txt
+/tmp/tmpsz_NWy/p/clientoutput_4.txt
+/tmp/tmpsz_NWy/p/clientoutput_5.txt
+/tmp/tmpsz_NWy/p/clientoutput_6.txt
+/tmp/tmpsz_NWy/p/clientoutput_7.txt
+/tmp/tmpsz_NWy/p/clientoutput_8.txt
+/tmp/tmpsz_NWy/p/clientoutput_9.txt
+/tmp/tmpsz_NWy/p/clientoutput_10.txt
+/tmp/tmpsz_NWy/p/clientoutput_11.txt
+/tmp/tmpsz_NWy/p/clientoutput_12.txt
+/tmp/tmpsz_NWy/p/clientoutput_13.txt
+/tmp/tmpsz_NWy/p/clientoutput_14.txt
+/tmp/tmpsz_NWy/p/clientoutput_15.txt
+/tmp/tmpsz_NWy/p/clientoutput_16.txt
+/tmp/tmpsz_NWy/p/clientoutput_17.txt
+/tmp/tmpsz_NWy/p/clientoutput_18.txt
+/tmp/tmpsz_NWy/p/clientoutput_19.txt
+/tmp/tmpsz_NWy/p/clientoutput_20.txt
+/tmp/tmpsz_NWy/p/clientoutput_21.txt
+/tmp/tmpsz_NWy/p/clientoutput_22.txt
+/tmp/tmpsz_NWy/p/clientoutput_23.txt
+/tmp/tmpsz_NWy/p/clientoutput_24.txt
+/tmp/tmpsz_NWy/p/clientoutput_25.txt
+/tmp/tmpsz_NWy/p/clientoutput_26.txt
+/tmp/tmpsz_NWy/p/clientoutput_27.txt
+/tmp/tmpsz_NWy/p/clientoutput_28.txt
+/tmp/tmpsz_NWy/p/clientoutput_29.txt
+/tmp/tmpsz_NWy/p/clientoutput_30.txt
+/tmp/tmpsz_NWy/p/clientoutput_31.txt
+/tmp/tmpsz_NWy/p/clientoutput_32.txt
+/tmp/tmpsz_NWy/p/clientoutput_33.txt
+/tmp/tmpsz_NWy/p/clientoutput_34.txt
+/tmp/tmpsz_NWy/p/clientoutput_35.txt
+/tmp/tmpsz_NWy/p/clientoutput_36.txt
+/tmp/tmpsz_NWy/p/clientoutput_37.txt
+/tmp/tmpsz_NWy/p/clientoutput_38.txt
+/tmp/tmpsz_NWy/p/clientoutput_39.txt
+/tmp/tmpsz_NWy/p/clientoutput_40.txt
+/tmp/tmpsz_NWy/p/clientoutput_41.txt
+/tmp/tmpsz_NWy/p/clientoutput_42.txt
+/tmp/tmpsz_NWy/p/clientoutput_43.txt
+/tmp/tmpsz_NWy/p/clientoutput_44.txt
+/tmp/tmpsz_NWy/p/clientoutput_45.txt
+/tmp/tmpsz_NWy/p/clientoutput_46.txt
+/tmp/tmpsz_NWy/p/clientoutput_47.txt
+/tmp/tmpsz_NWy/p/clientoutput_48.txt
+/tmp/tmpsz_NWy/p/clientoutput_49.txt
+/tmp/tmpsz_NWy/p/clientoutput_50.txt
+/tmp/tmpsz_NWy/p/clientoutput_51.txt
+/tmp/tmpsz_NWy/p/clientoutput_52.txt
+/tmp/tmpsz_NWy/p/clientoutput_53.txt
+/tmp/tmpsz_NWy/p/clientoutput_54.txt
+/tmp/tmpsz_NWy/p/clientoutput_55.txt
+/tmp/tmpsz_NWy/p/clientoutput_56.txt
+/tmp/tmpsz_NWy/p/clientoutput_57.txt
+/tmp/tmpsz_NWy/p/clientoutput_58.txt
+/tmp/tmpsz_NWy/p/clientoutput_59.txt
+/tmp/tmpsz_NWy/p/clientoutput_60.txt
+/tmp/tmpsz_NWy/p/clientoutput_61.txt
+/tmp/tmpsz_NWy/p/clientoutput_62.txt
+
+
+test many_clients 
+ (Check that up to 63 clients can run concurrently)
+
+starting clients_leave
+
+**********************************************************************
+
+Test clients_leave
+Check for consistent outputs from server and clients when client leave and reenter
+
+**********************************************************************
+running server with: /tmp/tmpsz_NWy/p/shm_server
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+/tmp/tmpsz_NWy/p/serveroutput.txt
+/tmp/tmpsz_NWy/p/clientoutput_0.txt
+/tmp/tmpsz_NWy/p/clientoutput_1.txt
+/tmp/tmpsz_NWy/p/clientoutput_2.txt
+/tmp/tmpsz_NWy/p/clientoutput_3.txt
+21521 9 9
+21522 3 3
+21523 9 9
+21731 3 3
+
+
+test clients_leave 
+ (Check for consistent outputs from server and clients when client leave and reenter)
+
+starting clients_leave2
+
+**********************************************************************
+
+Test clients_leave2
+Check for consistent outputs from server and 63 clients when 1 client leaves and reenters
+
+**********************************************************************
+running server with: /tmp/tmpsz_NWy/p/shm_server
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+/tmp/tmpsz_NWy/p/serveroutput.txt
+/tmp/tmpsz_NWy/p/clientoutput_0.txt
+/tmp/tmpsz_NWy/p/clientoutput_1.txt
+/tmp/tmpsz_NWy/p/clientoutput_2.txt
+/tmp/tmpsz_NWy/p/clientoutput_3.txt
+/tmp/tmpsz_NWy/p/clientoutput_4.txt
+/tmp/tmpsz_NWy/p/clientoutput_5.txt
+/tmp/tmpsz_NWy/p/clientoutput_6.txt
+/tmp/tmpsz_NWy/p/clientoutput_7.txt
+/tmp/tmpsz_NWy/p/clientoutput_8.txt
+/tmp/tmpsz_NWy/p/clientoutput_9.txt
+/tmp/tmpsz_NWy/p/clientoutput_10.txt
+/tmp/tmpsz_NWy/p/clientoutput_11.txt
+/tmp/tmpsz_NWy/p/clientoutput_12.txt
+/tmp/tmpsz_NWy/p/clientoutput_13.txt
+/tmp/tmpsz_NWy/p/clientoutput_14.txt
+/tmp/tmpsz_NWy/p/clientoutput_15.txt
+/tmp/tmpsz_NWy/p/clientoutput_16.txt
+/tmp/tmpsz_NWy/p/clientoutput_17.txt
+/tmp/tmpsz_NWy/p/clientoutput_18.txt
+/tmp/tmpsz_NWy/p/clientoutput_19.txt
+/tmp/tmpsz_NWy/p/clientoutput_20.txt
+/tmp/tmpsz_NWy/p/clientoutput_21.txt
+/tmp/tmpsz_NWy/p/clientoutput_22.txt
+/tmp/tmpsz_NWy/p/clientoutput_23.txt
+/tmp/tmpsz_NWy/p/clientoutput_24.txt
+/tmp/tmpsz_NWy/p/clientoutput_25.txt
+/tmp/tmpsz_NWy/p/clientoutput_26.txt
+/tmp/tmpsz_NWy/p/clientoutput_27.txt
+/tmp/tmpsz_NWy/p/clientoutput_28.txt
+/tmp/tmpsz_NWy/p/clientoutput_29.txt
+/tmp/tmpsz_NWy/p/clientoutput_30.txt
+/tmp/tmpsz_NWy/p/clientoutput_31.txt
+/tmp/tmpsz_NWy/p/clientoutput_32.txt
+/tmp/tmpsz_NWy/p/clientoutput_33.txt
+/tmp/tmpsz_NWy/p/clientoutput_34.txt
+/tmp/tmpsz_NWy/p/clientoutput_35.txt
+/tmp/tmpsz_NWy/p/clientoutput_36.txt
+/tmp/tmpsz_NWy/p/clientoutput_37.txt
+/tmp/tmpsz_NWy/p/clientoutput_38.txt
+/tmp/tmpsz_NWy/p/clientoutput_39.txt
+/tmp/tmpsz_NWy/p/clientoutput_40.txt
+/tmp/tmpsz_NWy/p/clientoutput_41.txt
+/tmp/tmpsz_NWy/p/clientoutput_42.txt
+/tmp/tmpsz_NWy/p/clientoutput_43.txt
+/tmp/tmpsz_NWy/p/clientoutput_44.txt
+/tmp/tmpsz_NWy/p/clientoutput_45.txt
+/tmp/tmpsz_NWy/p/clientoutput_46.txt
+/tmp/tmpsz_NWy/p/clientoutput_47.txt
+/tmp/tmpsz_NWy/p/clientoutput_48.txt
+/tmp/tmpsz_NWy/p/clientoutput_49.txt
+/tmp/tmpsz_NWy/p/clientoutput_50.txt
+/tmp/tmpsz_NWy/p/clientoutput_51.txt
+/tmp/tmpsz_NWy/p/clientoutput_52.txt
+/tmp/tmpsz_NWy/p/clientoutput_53.txt
+/tmp/tmpsz_NWy/p/clientoutput_54.txt
+/tmp/tmpsz_NWy/p/clientoutput_55.txt
+/tmp/tmpsz_NWy/p/clientoutput_56.txt
+/tmp/tmpsz_NWy/p/clientoutput_57.txt
+/tmp/tmpsz_NWy/p/clientoutput_58.txt
+/tmp/tmpsz_NWy/p/clientoutput_59.txt
+/tmp/tmpsz_NWy/p/clientoutput_60.txt
+/tmp/tmpsz_NWy/p/clientoutput_61.txt
+/tmp/tmpsz_NWy/p/clientoutput_62.txt
+/tmp/tmpsz_NWy/p/clientoutput_new.txt
+21760 15 15
+21761 15 15
+21762 15 15
+21763 15 15
+21764 15 15
+21765 15 15
+21766 15 15
+21767 15 15
+21768 15 15
+21769 15 15
+21770 15 15
+21771 15 15
+21772 15 15
+21773 15 15
+21774 15 15
+21775 15 15
+21776 15 15
+21777 15 15
+21778 15 15
+21779 15 15
+21780 15 15
+21781 15 15
+21782 15 15
+21783 15 15
+21784 15 15
+21785 15 15
+21786 15 15
+21787 15 15
+21788 15 15
+21789 15 15
+21790 15 15
+21791 15 15
+21792 15 15
+21794 15 15
+21795 15 15
+21796 15 15
+21797 15 15
+21798 15 15
+21799 15 15
+21800 15 15
+21801 15 15
+21802 15 15
+21803 15 15
+21804 15 15
+21805 15 15
+21806 15 15
+21807 15 15
+21808 15 15
+21809 15 15
+21810 15 15
+21811 15 15
+21812 15 15
+21813 15 15
+21844 5 5
+21748 15 15
+21749 5 5
+21751 15 15
+21752 15 15
+21754 15 15
+21755 15 15
+21756 15 15
+21757 15 15
+21758 15 15
+21759 15 15
+
+
+test clients_leave2 
+ (Check for consistent outputs from server and 63 clients when 1 client leaves and reenters)
+
+starting clients_all_leave
+
+**********************************************************************
+
+Test clients_all_leave
+Check for consistent outputs from server and clients when all clients leave and reenter
+
+**********************************************************************
+running server with: /tmp/tmpsz_NWy/p/shm_server
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+running client with: /tmp/tmpsz_NWy/p/shm_client
+/tmp/tmpsz_NWy/p/serveroutput.txt
+/tmp/tmpsz_NWy/p/clientoutput_0.txt
+/tmp/tmpsz_NWy/p/clientoutput_1.txt
+/tmp/tmpsz_NWy/p/clientoutput_2.txt
+/tmp/tmpsz_NWy/p/clientoutput_3.txt
+/tmp/tmpsz_NWy/p/clientoutput_4.txt
+/tmp/tmpsz_NWy/p/clientoutput_5.txt
+/tmp/tmpsz_NWy/p/clientoutput_6.txt
+/tmp/tmpsz_NWy/p/clientoutput_7.txt
+/tmp/tmpsz_NWy/p/clientoutput_8.txt
+/tmp/tmpsz_NWy/p/clientoutput_9.txt
+/tmp/tmpsz_NWy/p/clientoutput_10.txt
+/tmp/tmpsz_NWy/p/clientoutput_11.txt
+/tmp/tmpsz_NWy/p/clientoutput_12.txt
+/tmp/tmpsz_NWy/p/clientoutput_13.txt
+/tmp/tmpsz_NWy/p/clientoutput_14.txt
+/tmp/tmpsz_NWy/p/clientoutput_15.txt
+/tmp/tmpsz_NWy/p/clientoutput_16.txt
+/tmp/tmpsz_NWy/p/clientoutput_17.txt
+/tmp/tmpsz_NWy/p/clientoutput_18.txt
+/tmp/tmpsz_NWy/p/clientoutput_19.txt
+22336 5 5
+22337 5 5
+22338 5 5
+22339 5 5
+22340 4 4
+22341 5 5
+22342 5 5
+22343 5 5
+22344 5 5
+22345 5 5
+22353 5 5
+22354 5 5
+22355 5 5
+22356 5 5
+22357 5 5
+22358 5 5
+22359 5 5
+22360 5 5
+22361 5 5
+22362 5 5
+
+
+test clients_all_leave 
+ (Check for consistent outputs from server and clients when all clients leave and reenter)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test linttest PASSED (10 of 10)
+ (Lint test for C programming style)
+
+test client_without_server PASSED (10 of 10)
+ (Client should exit gracefully if no server is running)
+
+test one_client PASSED (10 of 10)
+ (Test basic functionality for one client & server)
+
+test two_clients 
+ (Check that 2 clients can run concurrently)
+
+test five_clients 
+ (Check that 5 clients can run concurrently)
+
+test many_clients 
+ (Check that up to 63 clients can run concurrently)
+
+test clients_leave 
+ (Check for consistent outputs from server and clients when client leave and reenter)
+
+test clients_leave2 
+ (Check for consistent outputs from server and 63 clients when 1 client leaves and reenters)
+
+test clients_all_leave 
+ (Check for consistent outputs from server and clients when all clients leave and reenter)
+
+Passed 10 of 10 tests.
+Overall 10 of 10
+Points 90 of 90
